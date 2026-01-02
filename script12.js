@@ -129,7 +129,7 @@ $(function () {
         $(".conversation-container").scrollTop(scroll),
         send());
   });
-  $("#name").html("codewithfaraz");
+  $("#name").html("TAPIIN");
   function send() {
     var sr = lastmsg.split(" ");
     var search = "";
@@ -336,3 +336,4 @@ $(function () {
     }
   }
 });
+
