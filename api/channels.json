@@ -1,0 +1,5 @@
+{
+  "name": "ORBIT WORLD TECH API",
+  "endpoint": "GET /api/channels.json",
+  "source": "data/channels.json"
+}

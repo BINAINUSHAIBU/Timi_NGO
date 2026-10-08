@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150">
+<defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#00d4ff"/><stop offset="1" stop-color="#7c4dff"/></linearGradient></defs>
+<rect width="500" height="150" rx="28" fill="#080d1d"/>
+<circle cx="78" cy="75" r="43" fill="none" stroke="url(#g)" stroke-width="10"/>
+<path d="M58 55v40l38-20z" fill="#00d4ff"/>
+<text x="140" y="91" fill="white" font-family="Arial" font-size="50" font-weight="800">ORBIT</text>
+<text x="315" y="91" fill="#00d4ff" font-family="Arial" font-size="32" font-weight="700">WORLD TECH</text>
+</svg>

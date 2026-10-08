@@ -1,0 +1,172 @@
+[
+  {
+    "name": "Nigeria",
+    "flag": "🇳🇬",
+    "code": "NG"
+  },
+  {
+    "name": "South Africa",
+    "flag": "🇿🇦",
+    "code": "ZA"
+  },
+  {
+    "name": "Kenya",
+    "flag": "🇰🇪",
+    "code": "KE"
+  },
+  {
+    "name": "Ghana",
+    "flag": "🇬🇭",
+    "code": "GH"
+  },
+  {
+    "name": "Egypt",
+    "flag": "🇪🇬",
+    "code": "EG"
+  },
+  {
+    "name": "Morocco",
+    "flag": "🇲🇦",
+    "code": "MA"
+  },
+  {
+    "name": "United States",
+    "flag": "🇺🇸",
+    "code": "US"
+  },
+  {
+    "name": "Canada",
+    "flag": "🇨🇦",
+    "code": "CA"
+  },
+  {
+    "name": "United Kingdom",
+    "flag": "🇬🇧",
+    "code": "GB"
+  },
+  {
+    "name": "Ireland",
+    "flag": "🇮🇪",
+    "code": "IE"
+  },
+  {
+    "name": "Germany",
+    "flag": "🇩🇪",
+    "code": "DE"
+  },
+  {
+    "name": "France",
+    "flag": "🇫🇷",
+    "code": "FR"
+  },
+  {
+    "name": "Italy",
+    "flag": "🇮🇹",
+    "code": "IT"
+  },
+  {
+    "name": "Spain",
+    "flag": "🇪🇸",
+    "code": "ES"
+  },
+  {
+    "name": "Netherlands",
+    "flag": "🇳🇱",
+    "code": "NL"
+  },
+  {
+    "name": "Sweden",
+    "flag": "🇸🇪",
+    "code": "SE"
+  },
+  {
+    "name": "Norway",
+    "flag": "🇳🇴",
+    "code": "NO"
+  },
+  {
+    "name": "Finland",
+    "flag": "🇫🇮",
+    "code": "FI"
+  },
+  {
+    "name": "Denmark",
+    "flag": "🇩🇰",
+    "code": "DK"
+  },
+  {
+    "name": "Switzerland",
+    "flag": "🇨🇭",
+    "code": "CH"
+  },
+  {
+    "name": "United Arab Emirates",
+    "flag": "🇦🇪",
+    "code": "AE"
+  },
+  {
+    "name": "Saudi Arabia",
+    "flag": "🇸🇦",
+    "code": "SA"
+  },
+  {
+    "name": "India",
+    "flag": "🇮🇳",
+    "code": "IN"
+  },
+  {
+    "name": "China",
+    "flag": "🇨🇳",
+    "code": "CN"
+  },
+  {
+    "name": "Japan",
+    "flag": "🇯🇵",
+    "code": "JP"
+  },
+  {
+    "name": "South Korea",
+    "flag": "🇰🇷",
+    "code": "KR"
+  },
+  {
+    "name": "Singapore",
+    "flag": "🇸🇬",
+    "code": "SG"
+  },
+  {
+    "name": "Australia",
+    "flag": "🇦🇺",
+    "code": "AU"
+  },
+  {
+    "name": "New Zealand",
+    "flag": "🇳🇿",
+    "code": "NZ"
+  },
+  {
+    "name": "Brazil",
+    "flag": "🇧🇷",
+    "code": "BR"
+  },
+  {
+    "name": "Mexico",
+    "flag": "🇲🇽",
+    "code": "MX"
+  },
+  {
+    "name": "Argentina",
+    "flag": "🇦🇷",
+    "code": "AR"
+  },
+  {
+    "name": "Chile",
+    "flag": "🇨🇱",
+    "code": "CL"
+  },
+  {
+    "name": "Turkey",
+    "flag": "🇹🇷",
+    "code": "TR"
+  }
+]
