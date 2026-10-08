@@ -45,14 +45,26 @@ function fav(b){b.textContent=b.textContent==="♡"?"♥":"♡"}
 window.openPlayer=id=>{
  const c=state.channels.find(x=>x.id===id); if(!c)return;
  $("#playerTitle").textContent=c.name; $("#playerModal").classList.remove("hidden");
- const video=$("#video"); video.pause(); video.removeAttribute("src"); video.load();
- $("#playerMessage").textContent=c.stream?"Loading live source…":"Channel is ready in the catalog, but no stream URL has been assigned yet. Add an authorized HLS .m3u8 URL to data/channels.json.";
- if(c.stream){
-   if(window.Hls&&Hls.isSupported()){window.currentHls?.destroy();const h=new Hls();window.currentHls=h;h.loadSource(c.stream);h.attachMedia(video);h.on(Hls.Events.MANIFEST_PARSED,()=>video.play().catch(()=>{}));}
+ const video=$("#video"), box=$("#playerMessage");
+ video.pause(); video.removeAttribute("src"); video.load();
+ window.currentHls?.destroy(); window.currentHls=null;
+ if(c.sourceType==="youtube"){
+   video.style.display="none";
+   box.innerHTML=`<div class="embed-wrap"><iframe src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(c.sourceId)}?autoplay=1&rel=0" title="${esc(c.name)}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
+   <div class="source-note">Official ${esc(c.provider)} live source. If playback is unavailable, use the official source link below.</div>
+   <a class="source-link" href="${esc(c.sourceUrl)}" target="_blank" rel="noopener">Open official source ↗</a>`;
+ } else if(c.sourceType==="external"){
+   video.style.display="none";
+   box.innerHTML=`<div class="external-source"><b>Official live web source</b><p>This provider publishes its live player on its own website.</p><a class="source-link" href="${esc(c.sourceUrl)}" target="_blank" rel="noopener">Open ${esc(c.provider)} Live ↗</a></div>`;
+ } else if(c.stream){
+   video.style.display="block"; box.textContent="Loading live HLS source…";
+   if(window.Hls&&Hls.isSupported()){const h=new Hls();window.currentHls=h;h.loadSource(c.stream);h.attachMedia(video);h.on(Hls.Events.MANIFEST_PARSED,()=>video.play().catch(()=>{}));}
    else {video.src=c.stream;video.play().catch(()=>{});}
+ } else {
+   video.style.display="block";
+   box.textContent="No direct HLS URL assigned to this catalog entry yet.";
  }
-};
-$("#closePlayer").onclick=()=>{$("#playerModal").classList.add("hidden");window.currentHls?.destroy();$("#video").pause()};
+};$("#closePlayer").onclick=()=>{$("#playerModal").classList.add("hidden");window.currentHls?.destroy();$("#video").pause()};
 $("#search").oninput=apply; $("#quality").onchange=apply;
 $("#clear").onclick=()=>{state.country="all";state.category="all";state.mode="all";$("#search").value="";$("#quality").value="all";apply()};
 document.querySelectorAll(".nav").forEach(b=>b.onclick=()=>{document.querySelectorAll(".nav").forEach(x=>x.classList.remove("active"));b.classList.add("active");state.country="all";state.category="all";state.mode=b.dataset.filter;apply()});
