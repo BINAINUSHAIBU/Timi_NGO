@@ -15,7 +15,20 @@
     "sourceType": "youtube",
     "sourceId": "nA9UZF-SZoQ",
     "sourceUrl": "https://www.youtube.com/watch?v=nA9UZF-SZoQ",
-    "provider": "NASA"
+    "provider": "NASA",
+    "officialSourceUrl": "https://www.nasa.gov/live/",
+    "fallbackSourceUrl": "https://www.nasa.gov/live/",
+    "officialSourceUrls": [
+      "https://www.nasa.gov/live/",
+      "https://plus.nasa.gov/",
+      "https://www.nasa.gov/multimedia/",
+      "https://www.nasa.gov/ways-to-watch/",
+      "https://www.nasa.gov/nasa-app/",
+      "https://www.youtube.com/@NASA"
+    ],
+    "sourceLabel": "Official NASA live source",
+    "fallbackLabel": "If playback is unavailable, use the official NASA source link below.",
+    "authorized": true
   },
   {
     "id": "orbit-global-iss-live",
@@ -31,9 +44,23 @@
     "status": "Official Live Source",
     "logo": "assets/orbit-logo.svg",
     "sourceType": "youtube",
-    "sourceId": "0P41gTF-Nl4",
-    "sourceUrl": "https://www.youtube.com/watch?v=0P41gTF-Nl4",
-    "provider": "NASA"
+    "sourceId": "jKHvbJe9c_Y",
+    "sourceUrl": "https://www.youtube.com/watch?v=jKHvbJe9c_Y",
+    "provider": "NASA",
+    "officialSourceUrl": "https://www.nasa.gov/live/",
+    "fallbackSourceUrl": "https://www.nasa.gov/live/",
+    "officialSourceUrls": [
+      "https://www.nasa.gov/live/",
+      "https://plus.nasa.gov/",
+      "https://www.nasa.gov/multimedia/",
+      "https://www.nasa.gov/ways-to-watch/",
+      "https://www.nasa.gov/nasa-app/",
+      "https://www.youtube.com/@NASA"
+    ],
+    "sourceLabel": "Official NASA live source",
+    "fallbackLabel": "If playback is unavailable, use the official NASA source link below.",
+    "authorized": true,
+    "sourceTitle": "NASA International Space Station Live — Official NASA Stream"
   },
   {
     "id": "orbit-eu-euronews-live",

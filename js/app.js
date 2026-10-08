@@ -50,9 +50,10 @@ window.openPlayer=id=>{
  window.currentHls?.destroy(); window.currentHls=null;
  if(c.sourceType==="youtube"){
    video.style.display="none";
+   const officialLinks=(c.officialSourceUrls||[]).map((url,i)=>`<a class="source-link source-link-small" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${i===0?"NASA Live":i===1?"NASA+":i===2?"NASA Multimedia":i===3?"Ways to Watch":i===4?"NASA App":"NASA YouTube"} ↗</a>`).join("");
    box.innerHTML=`<div class="embed-wrap"><iframe src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(c.sourceId)}?autoplay=1&rel=0" title="${esc(c.name)}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
-   <div class="source-note">Official ${esc(c.provider)} live source. If playback is unavailable, use the official source link below.</div>
-   <a class="source-link" href="${esc(c.sourceUrl)}" target="_blank" rel="noopener">Open official source ↗</a>`;
+   <div class="source-note"><b>${esc(c.sourceLabel||("Official "+c.provider+" live source."))}</b><br>${esc(c.fallbackLabel||"If playback is unavailable, use the official source link below.")}</div>
+   <div class="source-links"><a class="source-link" href="${esc(c.officialSourceUrl||c.sourceUrl)}" target="_blank" rel="noopener noreferrer">Open official source ↗</a>${officialLinks}</div>`;
  } else if(c.sourceType==="external"){
    video.style.display="none";
    box.innerHTML=`<div class="external-source"><b>Official live web source</b><p>This provider publishes its live player on its own website.</p><a class="source-link" href="${esc(c.sourceUrl)}" target="_blank" rel="noopener">Open ${esc(c.provider)} Live ↗</a></div>`;
