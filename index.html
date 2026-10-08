@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#050816">
+<title>ORBIT WORLD TECH</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand"><img src="assets/orbit-logo.svg" alt="ORBIT WORLD TECH"></div>
+    <button class="nav active" data-filter="all">🌐 All World Tech</button>
+    <button class="nav" data-filter="live">🔴 Live Tech</button>
+    <div class="side-title">CATEGORIES</div>
+    <div id="categoryMenu"></div>
+    <div class="side-title">COUNTRIES</div>
+    <div id="countryMenu"></div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <div class="eyebrow">● GLOBAL TECHNOLOGY NETWORK</div>
+        <h1>ORBIT <span>WORLD TECH</span></h1>
+        <p>Technology channels across the world</p>
+      </div>
+      <div class="search"><span>⌕</span><input id="search" placeholder="Search channels, countries, technology..."></div>
+    </header>
+
+    <section class="hero">
+      <div><b>🌍 WORLD TECH LIVE</b><strong>Explore global technology</strong><small>AI • Software • Gadgets • Cybersecurity • Science • Innovation</small></div>
+      <img src="assets/orbit-logo.svg" alt="">
+    </section>
+
+    <section class="stats">
+      <div><b id="total">0</b><span>Total Channels</span></div>
+      <div><b id="live">0</b><span>Live / Ready</span></div>
+      <div><b id="countries">0</b><span>Countries</span></div>
+      <div><b id="cats">0</b><span>Categories</span></div>
+    </section>
+
+    <section class="toolbar">
+      <div id="resultLabel">All World Technology</div>
+      <select id="quality"><option value="all">All Quality</option><option>HD</option><option>FHD</option><option>4K</option></select>
+      <button id="clear">Clear Filters</button>
+    </section>
+
+    <section id="channels" class="grid"></section>
+  </main>
+</div>
+
+<div id="playerModal" class="modal hidden">
+  <div class="player-box">
+    <button id="closePlayer" class="close">×</button>
+    <div class="player-head"><span id="playerTitle">ORBIT WORLD TECH</span><span id="playerStatus">READY</span></div>
+    <video id="video" controls playsinline></video>
+    <div id="playerMessage" class="player-message">Select a channel to start playback.</div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
